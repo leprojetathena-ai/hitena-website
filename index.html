@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assignement1.css" />
+    <title>Hitena</title>
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,34 +21,18 @@
           <ul>
             <li><a href="#Home">Home</a></li>
             <li><a href="#About">About</a></li>
-            <li><a href="#Blog">Blog</a></li>
+            <li><a href="#Download">Download</a></li>
             <li><a href="#Contact">Contact</a></li>
           </ul>
         </nav>
         <!-- using flex to align vertically h1 and its related p -->
         <div class="flexTitle" id="Home">
           <!-- adding a span here to get RA at the line and add the "-" before and after the ARO (for screenreaders) -->
-          <h1><span>ARO</span>RA</h1> 
-          <p>Jewelers</p>
+          <h1>HITENA</h1> 
+        
         </div>
       </div>
-      <ul class="icon">
-        <li class="headerIcon">
-          <img src="./assets/Instagram_Glyph_White.png" alt="White Instagram logo" />
-        </li>
-        <li class="headerIcon">
-          <img src="./assets/f_logo_RGB-White_72.png" alt="White facebook logo" />
-        </li>
-        <li class="headerIcon">
-          <img src="./assets/Ghost Logo (for dark backgrounds).png" alt="White snapchat logo" />
-        </li>
-        <li class="headerIcon">
-          <img
-            src="./assets/Twitter social icons - rounded square - white.png"
-            alt="White twiitter logo"
-          />
-        </li>
-      </ul>
+    
     </header>
     <!-- Header stops here -->
 
@@ -65,7 +49,7 @@
             />
           </figure>
           <article class="articleFirstSection">
-            <h2>HAND CRAFTED</h2>
+            <h2>Learn with Hitena</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reprehenderit dolorum tempora saepe provident, ex aspernatur
@@ -76,7 +60,6 @@
               molestias, eos repellat ratione laboriosam. Dignissimos magnam
               veniam minus!
             </p>
-            <button>READ MORE</button>
           </article>
         </div>
       </section>
@@ -85,7 +68,7 @@
       <!-- Gallery section starts here-->
       <section class="gallery">
         <div class="wrapper">
-          <h2>LATEST COLLECTION</h2>
+          <h2>Multi Categories</h2>
           <ul>
             <li>
               <img
@@ -110,31 +93,19 @@
       </section>
       <!-- End of gallery section -->
 
-      <!-- Start of third section -->
-      <section class="thirdSection" id="Blog">
-        <div class="wrapper">
-          <ul>
-            <li><p>CATOLOGUE</p></li>
-            <li><p>EVENTS</p></li>
-            <li><p>COLLABORATIONS</p></li>
-          </ul>
-        </div>
-      </section>
-      <!-- End of third section -->
 
       <!-- Start of fourth section -->
-      <section class="fourthSection">
+      <section class="fourthSection" id="Download">
         <!-- adding a div to display text and images side by side using flex -->
         <div class="row firstRow">
           <article class="articleFirstRow">
-            <h2>SUSTAINABLE <span>MATERIALS</span></h2>
+            <h2>Download</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
               modi quos culpa eveniet natus, ex a, esse odio molestias velit
               suscipit, inventore nesciunt voluptas cupiditate! Nulla
               necessitatibus consequuntur odit accusantium?
             </p>
-            <button>READ MORE</button>
           </article>
           <figure class="imageFirstRow">
             <img
@@ -143,25 +114,6 @@
               alt="Zoom on a woman wearing 2 necklaces and a pink dress. "
             />
           </figure>
-        </div>
-        <!-- adding a div to flex text and images -->
-        <div class="row">
-          <figure class="imageSecondRow">
-            <img
-              src="./assets/image-2-copy@2x.png"
-              alt="Zoom on a hand wearing 2 rings and a watch. Rings and watch are assorted with white and green-blue colors"
-            />
-          </figure>
-          <article class="articleSecondRow">
-            <h2>MIX & MATCH</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              modi quos culpa eveniet natus, ex a, esse odio molestias velit
-              suscipit, inventore nesciunt voluptas cupiditate! Nulla
-              necessitatibus consequuntur odit accusantium?
-            </p>
-            <button>READ MORE</button>
-          </article>
         </div>
       </section>
       <!-- end of the fourth section -->
@@ -174,27 +126,26 @@
             <ul class="navContact">
               <li><a href="#Home">Home</a></li>
               <li><a href="#About">About</a></li>
-              <li><a href="#Blog">Blog</a></li>
+              <li><a href="#Download">Download</a></li>
               <li><a href="#Contact">Contact</a></li>
             </ul>
           </nav>
-          <!-- adding a div here to group the newsletter information together and use flex to show them on top of each other -->
-            <div class="newsletter">
-              <h3>STAY UPDATED</h3>
-              <p>Subscribe to our newsletter to stay updated</p>
-              <form action="#" method="POST" name="newsletter">
-                <div class="email">
-                  <label class="sr-only" for="emailAddress">Email adress</label>
-                  <input
-                    type="email"
-                    id="emailAddress"
-                    name="emailAddress"
-                    placeholder="email address"
-                  />
-                  <button type="submit">SUBSCRIBE</button>
-                </div>
-              </form>
-            </div>
+          <div>
+              <ul class="icone">
+        <li class="headerIcon">
+          <img src="./assets/Instagram_Glyph_White.png" alt="White Instagram logo" />
+        </li>
+        <li class="headerIcon">
+          <img src="./assets/f_logo_RGB-White_72.png" alt="White facebook logo" />
+        </li>
+        <li class="headerIcon">
+          <img
+            src="./assets/Twitter social icons - rounded square - white.png"
+            alt="White twitter logo"
+          />
+        </li>
+      </ul>
+          </div>
            <!-- adding a div here to display contact infos on top of each other -->
             <div class="infos">
               <h3>CONTACT</h3>
@@ -209,13 +160,5 @@
       <!-- End of contact section -->
     </main>
     <!-- End of main -->
-
-    <!-- start of footer -->
-    <footer>
-      <div class="wrapper">
-        <p>Copyright © 2019 HackerYou</p>
-      </div>
-    </footer>
-    <!-- End of footer -->
   </body>
 </html>
