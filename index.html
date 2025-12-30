@@ -1,164 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hitena</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header starts here -->
-    <header>
-      <div class="wrapper">
-        <nav>
-          <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Download">Download</a></li>
-            <li><a href="#Contact">Contact</a></li>
-          </ul>
-        </nav>
-        <!-- using flex to align vertically h1 and its related p -->
-        <div class="flexTitle" id="Home">
-          <!-- adding a span here to get RA at the line and add the "-" before and after the ARO (for screenreaders) -->
-          <h1>HITENA</h1> 
-        
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitena | Master the TEF French Exam</title>
     
-    </header>
-    <!-- Header stops here -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Main starts here, it has 5 sections-->
-    <main>
-      <!-- Section 1 starts here -->
-      <section class="firstSection" id="About">
-        <!-- Using flex to display picture and text side by side -->
-        <div class="wrapper section1Flex">
-          <figure class="figureFirstSection">
-            <img
-              src="./assets/image-6@2x.png"
-              alt="Zoom on 2 hands working on creating jewelry "
-            />
-          </figure>
-          <article class="articleFirstSection">
-            <h2>Learn with Hitena</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit dolorum tempora saepe provident, ex aspernatur
-              praesentium pariatur unde cum non quia accusamus ipsam dolor sit
-              mollitia, nemo amet aperiam reiciendis?Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Eveniet voluptatibus atque suscipit
-              repudiandae enim veniam tempora neque debitis cupiditate a quo
-              molestias, eos repellat ratione laboriosam. Dignissimos magnam
-              veniam minus!
-            </p>
-          </article>
-        </div>
-      </section>
-      <!-- first section stops here -->
-
-      <!-- Gallery section starts here-->
-      <section class="gallery">
-        <div class="wrapper">
-          <h2>Multi Categories</h2>
-          <ul>
-            <li>
-              <img
-                src="./assets/image-2_2@2x.png"
-                alt="Several necklaces. 1 made of silver and 3 made of gold, other are in the background blurry"
-              />
-            </li>
-            <li>
-              <img
-                src="./assets/image-4@2x.png"
-                alt="Zoom on a gold ring on a grey support"
-              />
-            </li>
-            <li>
-              <img class="img3"
-                src="./assets/image-3.jpg"
-                alt="Collection of  earring made of gold and pear"
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- End of gallery section -->
-
-
-      <!-- Start of fourth section -->
-      <section class="fourthSection" id="Download">
-        <!-- adding a div to display text and images side by side using flex -->
-        <div class="row firstRow">
-          <article class="articleFirstRow">
-            <h2>Download</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              modi quos culpa eveniet natus, ex a, esse odio molestias velit
-              suscipit, inventore nesciunt voluptas cupiditate! Nulla
-              necessitatibus consequuntur odit accusantium?
-            </p>
-          </article>
-          <figure class="imageFirstRow">
-            <img
-              class="firstImage"
-              src="./assets/andie-gomez-acebo-744590-unsplash.jpg"
-              alt="Zoom on a woman wearing 2 necklaces and a pink dress. "
-            />
-          </figure>
-        </div>
-      </section>
-      <!-- end of the fourth section -->
-
-      <!-- Start of the contact section -->
-      <section class="contact" id="Contact">
-        <!-- adding a flex here to display every section side by side -->
-        <div class="wrapper flexContact">
-          <nav>
-            <ul class="navContact">
-              <li><a href="#Home">Home</a></li>
-              <li><a href="#About">About</a></li>
-              <li><a href="#Download">Download</a></li>
-              <li><a href="#Contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div>
-              <ul class="icone">
-        <li class="headerIcon">
-          <img src="./assets/Instagram_Glyph_White.png" alt="White Instagram logo" />
-        </li>
-        <li class="headerIcon">
-          <img src="./assets/f_logo_RGB-White_72.png" alt="White facebook logo" />
-        </li>
-        <li class="headerIcon">
-          <img
-            src="./assets/Twitter social icons - rounded square - white.png"
-            alt="White twitter logo"
-          />
-        </li>
-      </ul>
-          </div>
-           <!-- adding a div here to display contact infos on top of each other -->
-            <div class="infos">
-              <h3>CONTACT</h3>
-              <ul>
-                <li>info@email.com | 123-456-7890</li>
-                <li>123 some road, Toronto, ON</li>
-                <li>ASA SAS, Canada</li>
-              </ul>
+    <header>
+        <div class="wrapper nav-container">
+            <div class="logo-group">
+                <a href="#home" class="logo-link">
+                    <img src="./assets/Hitena.png" alt="Hitena Icon" class="logo-img">
+                    <span class="logo-text">HITENA</span>
+                </a>
             </div>
+            
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Features</a></li>
+                    <li><a href="#download" class="cta-nav">Get Started</a></li>
+                </ul>
+            </nav>
         </div>
-      </section>
-      <!-- End of contact section -->
+    </header>
+
+    <main>
+        
+        <section id="home" class="hero">
+            <div class="wrapper">
+                <h1>Your Path to French <br><span class="accent-text">Certification</span></h1>
+                
+                <p>Master the TEF exam with Hitena. Our AI-powered platform provides real-time feedback on speaking and writing to help you reach your CLB level faster.</p>
+                
+                <a href="#download" class="btn primary">Start Free Prep</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="wrapper flex-container">
+                
+                <div class="text-block">
+                    <h2>Master All 4 Skills</h2>
+                    <p>The TEF exam is demanding. Hitena breaks down your preparation into manageable daily goals, ensuring you are ready for every section of the test.</p>
+                    
+                    <ul class="features">
+                        <li>✦ AI Oral Expression Simulations</li>
+                        <li>✦ Section-specific Mock Exams</li>
+                        <li>✦ Vocabulary for Canada Immigration</li>
+                        <li>✦ Personalized Progress Tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="app-image">
+                    <img src="./assets/app.png" alt="Hitena TEF App Interface">
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="wrapper">
+                <h2>Inside the Hitena Experience</h2>
+                <div class="video-container">
+                    <video controls poster="./assets/app.png">
+                        <source src="./assets/app-video.MP4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="wrapper">
+                <h2>Download & Start Practicing</h2>
+                <div class="download-grid">
+                    
+                    <div class="qr-code">
+                        <img src="./assets/qrcode.png" alt="Scan to download Hitena">
+                        
+                    </div>
+                    
+                    <div class="store-links">
+                        <a href="#" class="store-btn">
+                            <img src="./assets/appstore.svg" alt="Download on iOS App Store">
+                        </a>
+                        <a href="#" class="store-btn">
+                            <img src="./assets/google.svg" alt="Get it on Google Play Store">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
     </main>
-    <!-- End of main -->
-  </body>
+
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2025 HITENA - TEF French Exam Preparation</p>
+        </div>
+    </footer>
+
+</body>
 </html>

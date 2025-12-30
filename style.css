@@ -1,455 +1,218 @@
-html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
-
-html { box-sizing: border-box;}
-å
-*, *:before, *:after {box-sizing: inherit}
-
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
-
-
-img {
-    display: block;
-    width: 100%;
+/* ==========================================
+   BRAND COLORS
+   ========================================== */
+:root {
+    --primary: #e0843d;
+    --secondary: #2f4858;
+    --accent: #ee8b60;
+    --white: #ffffff;
+    --text-dark: #333333;
 }
 
-/* color
-Dark #201E21
-Dark two #14171F
-Apricot #FABA63
-White #FFFFFF
-*/
+/* --- RESET & GLOBAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden; /* Prevents side-scrolling */
+}
 
-/* ---------------------------------- */
-/* General styling */
-
-.wrapper{
-    max-width: 1250px;
+.wrapper {
+    max-width: 1100px;
     width: 90%;
     margin: 0 auto;
 }
 
-html{
-    background-color:#201E21;
-    color: white;
+/* --- HEADER --- */
+header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-h1{
-    font-family: 'Italiana', serif;
-    font-size: 8.1rem;
-    color: black;
-    line-height: 140.4px;
-    text-align: right;
-   
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.logo-img { height: 35px; width: auto; }
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.menu { display: flex; list-style: none; gap: 20px; }
+
+.menu a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.cta-nav {
+    background: var(--primary);
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 80px 0;
+    text-align: center; /* Centers text and inline-block items */
+    background: #f9f9f9;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
 }
 h2{
-    font-family: 'Italiana', serif;
-    font-size: 2.55rem;
+     margin-bottom: 20px;
 }
-h3{
-    font-family: 'Italiana', serif;
-    font-size: 1.25rem;
-    margin-bottom: 0;
 
+.accent-text { color: var(--primary); }
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px; /* margin: 0 auto centers the block */
+    font-size: 1.1rem;
 }
-ul{
+
+/* THE BUTTON FIX */
+.btn.primary {
+    display: inline-block; /* Essential for centering with text-align */
+    background-color: var(--primary);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+}
+
+/* --- ABOUT SECTION --- */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.text-block, .app-image { flex: 1; }
+
+.app-image img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.features{
     list-style: none;
 }
-a{
-    text-decoration: none;
-}
-p{
-    font-size: 1rem;
-    font-family: 'Lato', sans-serif;
-    line-height: 29px;
-}
-section{
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-section button{
-    border: 2px solid #FABA63;
-    font-family: 'Italiana', serif;
-    font-size: 1.25rem;
-    color: white;
-    padding: 8px;
-}
-/* ---------------------------------- */
+/* --- VIDEO --- */
+.video-section { padding: 60px 0; text-align: center; background: var(--secondary); color: #fff; }
 
-/* ---------------------------------- */
-/* Styling of header */
-header{
-   min-height: 30vh;
-   background-color: white ;
+.video-container {
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-header ul{
+video { width: 100%; display: block; }
+
+/* --- DOWNLOAD SECTION (FIX FOR OVERFLOW) --- */
+.download { padding: 80px 0; text-align: center; }
+
+.download-grid {
     display: flex;
-}
-header nav{
-    padding-top:20px;
-}
-header a{
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    color: #FABA63;
-    padding: 10px;
-   
-}
-
-header p {
-    font-family: 'Lato', sans-serif;
-    font-size: 2.25rem;
-    color: #FABA63;
-    margin: 0;
-}
-
-/* using flex to align vertically h1 and its related p */
-.flexTitle{
- 
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-   
-}
-/* Using flex to align vertivally all social media icons */
-.icon{
-    flex-direction: column;
-  position: absolute;
-  right: 30px;
-  bottom: 50px;
-  
-}
-/* resizing social media icons */
-.headerIcon {
-    width: 30px;
-    padding: 5px;
-}
-/* end of header styling */
-/* ---------------------------------- */
-
-/* ----------------------------------- */
-/* styling of first section */
-.firstSection{
-    background-color: #14171F;
+    gap: 40px;
+    margin-top: 30px;
 }
 
-.figureFirstSection{
-    width: 23%; 
-}
+.qr-code img { width: 130px; border: 1px solid #eee; padding: 10px; border-radius: 10px; }
 
-.articleFirstSection{
-    width: 65%;
-}
-/* Using flex to dispaly picture and text side by side */
-.section1Flex{
+.store-links {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    gap: 100px;
 }
 
-.firstSection button{
-    background-color: #14171F;
+.store-btn img {
+    width: 180px; /* Fixed width to prevent overflow on small screens */
+    height: auto;
 }
-/* End of section 1 styling */
-/* -------------------------- */
 
-/* ---------------------------- */
-/* Styling of gallery section */
-.gallery h2{
+/* --- FOOTER --- */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 0;
     text-align: center;
-}
-/* Using flex to display  */
-.gallery ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-   
-}
-.gallery li{
-    flex-basis: 32%;
-    min-width: 300px;
-}
-/* end of gallery section styling */
-/* --------------------------------------- */
-
-/* ---------------------------------------- */
-/* start of third section styling */
-.thirdSection {
-    background-color: #14171F;
-}
-/* Using flex to display options side by side */
-.thirdSection ul {
-    display: flex;
-    justify-content: space-around;
-}
-.thirdSection p {
-    font-family: 'Italiana', serif;
-    font-size: 1.5rem;
-}
-/* end of third section styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Start of fourth section styling */
-.fourthSection{
-    padding-top: 0;
-    padding-bottom: 0;
+    font-size: 0.8rem;
 }
 
-.fourthSection span{
-    display: block;
-}
-
-.fourthSection button{
-    background-color: #201E21;
-}
-/* using flex to display image and text side by side */
-.row{
-    display: flex;
-   
-}
-.articleFirstRow{
-    width: 55%;
-    padding: 75px 75px 100px 150px;
-} 
-.imageFirstRow{
-    width: 45%;
-    margin: 0;
-}
-
-.firstImage{
-    height: 100%;
-}
-
-.imageSecondRow{
-    width: 55%;
-    margin: 0;
-}
-
-.articleSecondRow{
-    width: 45%;
-    padding: 100px 150px 75px 75px;
-}
-/* End of fourth section styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Start of styling contact section */
-.contact{
-    background-color: #14171F;
-}
-/* styling of nav menu */
-.navContact a{
-    font-family: 'Italiana', serif;
-    font-size: 1rem;
-    color: white;
+/* ==========================================
+   MOBILE VIEW FIX (MAX-WIDTH: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Center the Hero completely */
+    h1 { font-size: 2.2rem; }
     
-}
-.navContact li{
-    padding: 5px;
-}
-
-/* styling of contact form */
-
-input{
-    width: 100%;
-}
-.contact button{
-    background-color: #000;
-    border: none;
-    padding-right: 30px;
-    padding-left: 30px;
-    font-size: 0.75rem;
-}
-.infos li{
-    font-size: 1rem;
-    font-family: 'Lato', sans-serif;
-    line-height: 29px;
-}
-
-/* Using flex to display every section side by side */
-.flexContact{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Using flex to display contact and newsletter as a column */
-.newsletter, .infos{
-    display: flex;
-    flex-direction: column;
-}
-.newsletter{
-    text-align: center;
-    width: 45%;
-}
-/* Using flex to display the email form and the submit button side by side */
-.email{
-    display: flex;
-}
-.infos{
-    text-align: end;
-}
-/* end of contact section styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Footer styling */
-footer{
-    text-align: center;
-    background-color: black;
-
-}
-footer p{
-    padding: 10px;
-    margin: 0;
-}
-/* End of footer styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Starting media query */
-
-@media (max-width: 750px) {
-    /* general styling */
-    h1{
-        font-size: 4rem;
-        line-height: 50px;
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
     }
-    h2{
+
+    /* Keep menu links visible but centered */
+    .menu {
+        padding: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Stack About section elements */
+    .flex-container {
+        flex-direction: column;
         text-align: center;
     }
-    section button {
-        margin: 0 auto;
+
+    /* FIX: Center and scale the Download grid */
+    .download-grid {
+        flex-direction: column; /* Stacks QR and Buttons vertically */
+        width: 100%;
+        gap:0px
     }
 
-    /* ---------------------------------- */
-    /* header styling */
-    header{
-        background-image: url(./assets/header-1.jpg);
+    .store-links {
+        flex-direction: row; /* Keeps buttons side by side */
+        width: 100%;
+        gap: 5px;
     }
-    header nav, header ul{
-        display: none;
-    }
-    header p{
-        font-size:1.2rem
-    }
-    .flexTitle{
-    width: 30%;
-    margin-left: 10px;
-    padding-top: 250px;
-}
-/* End of header styling */
-/* ---------------------------------- */
 
-/* ---------------------------------- */
-/* start of first section styling */
-
-.figureFirstSection{
-    width: 90%; 
+    
 }
-.section1Flex{
-    flex-direction: column;
-    align-items: center;
-}
-
-.articleFirstSection{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-/* End of first section styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Start of gallery styling */
-
-.img3{
-    display: none;
-}
-
-.gallery li{
-    flex-basis: 40%;
-    min-width: 250px;
-}
-/* end of gallery styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* start of third section styling */
-.thirdSection ul {
-    flex-direction: column;
-    text-align: center;
-}
-/* End of third section styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Start of fourth setion styling */
-.row{
-    flex-direction: column;
-    text-align: center;
-}
-
-.row button{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.row span{
-    display: inline;
-}
-.row article{
-    width: 100%;
-    padding: 10px;
-}
-.row figure{
-    width: 100%;
-}
-.row p{
-    text-align: left;
-}
-/* inverting order of first picture and first paragraph */
-.firstRow{
-    display: flex;
-    flex-direction: column-reverse;
-}
-/* End of fourth section styling */
-/* ---------------------------------- */
-
-/* ---------------------------------- */
-/* Start of contact section styling */
-.contact nav, .newsletter{
-    width: 100%;
-}
-.navContact li{
-    padding: 30px;
-}
-.flexContact{
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.navContact{
-    display: flex;
-}
-.infos{
- 
- text-align: center;
-}
-.infos ul{
-    padding: 0;
-}
-input, .contact button{
-    width: 90%;
-    height: 50px;
-    text-align: center;
-}
-.contact button {
-    font-size: 2rem;
-}
-.email {
-    flex-direction: column;
-    align-items: center;
-}
-/* End of contact form styling */
-/* ---------------------------------- */
-}
-/* End of media query */
