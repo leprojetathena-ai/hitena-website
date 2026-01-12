@@ -3,54 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in browser tab -->
     <title>Hitena | Master the TEF French Exam</title>
-    
+
+    <!-- Google Fonts: Montserrat for headings, Inter for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
+
+    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- HEADER SECTION: contains logo and navigation links -->
     <header>
         <div class="wrapper nav-container">
+
+            <!-- LOGO GROUP: brand logo and text -->
             <div class="logo-group">
                 <a href="#home" class="logo-link">
+                    <!-- Brand icon -->
                     <img src="./assets/Hitena.png" alt="Hitena Icon" class="logo-img">
+                    <!-- Brand name text -->
                     <span class="logo-text">HITENA</span>
                 </a>
             </div>
             
+            <!-- MAIN NAVIGATION MENU -->
             <nav>
                 <ul class="menu">
+                    <!-- Navigation links scroll to page sections -->
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Features</a></li>
                     <li><a href="#download" class="cta-nav">Get Started</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
+    <!-- MAIN CONTENT AREA -->
     <main>
         
+        <!-- HERO SECTION: introductory banner with title and call-to-action -->
         <section id="home" class="hero">
             <div class="wrapper">
+                <!-- Main headline with highlighted accent text -->
                 <h1>Your Path to French <br><span class="accent-text">Certification</span></h1>
                 
+                <!-- Short description of the platform -->
                 <p>Master the TEF exam with Hitena. Our AI-powered platform provides real-time feedback on speaking and writing to help you reach your CLB level faster.</p>
                 
+                <!-- Button leading users to the download section -->
                 <a href="#download" class="btn primary">Start Free Prep</a>
             </div>
         </section>
-           <section id="download" class="download">
+
+        <!-- DOWNLOAD SECTION: invites users to download the app -->
+        <section id="download" class="download">
             <div class="wrapper">
                 <h2>Download & Start Practicing</h2>
+
+                <!-- Grid layout containing QR code and app store links -->
                 <div class="download-grid">
                     
+                    <!-- QR code image for scanning to download the app -->
                     <div class="qr-code">
                         <img src="./assets/qrcode.png" alt="Scan to download Hitena">
-                        
                     </div>
                     
+                    <!-- Links to iOS App Store and Google Play -->
                     <div class="store-links">
                         <a href="#" class="store-btn">
                             <img src="./assets/appstore.svg" alt="Download on iOS App Store">
@@ -59,18 +81,20 @@
                             <img src="./assets/google.svg" alt="Get it on Google Play Store">
                         </a>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
+        <!-- ABOUT SECTION: highlights key features -->
         <section id="about" class="about">
             <div class="wrapper flex-container">
                 
+                <!-- Textual description of app benefits -->
                 <div class="text-block">
                     <h2>Master All 4 Skills</h2>
                     <p>The TEF exam is demanding. Hitena breaks down your preparation into manageable daily goals, ensuring you are ready for every section of the test.</p>
                     
+                    <!-- List of main features -->
                     <ul class="features">
                         <li>✦ AI Oral Expression Simulations</li>
                         <li>✦ Section-specific Mock Exams</li>
@@ -79,29 +103,32 @@
                     </ul>
                 </div>
                 
+                <!-- Image illustrating the app interface -->
                 <div class="app-image">
                     <img src="./assets/app.png" alt="Hitena TEF App Interface">
                 </div>
-                
             </div>
         </section>
 
+        <!-- VIDEO SECTION: embedded promotional or tutorial video -->
         <section class="video-section">
             <div class="wrapper">
                 <h2>Inside the Hitena Experience</h2>
+
+                <!-- Video container with poster image -->
                 <div class="video-container">
                     <video controls poster="./assets/app.png">
+                        <!-- MP4 video source -->
                         <source src="./assets/app-video.MP4" type="video/mp4">
+                        <!-- Fallback message for unsupported browsers -->
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
         </section>
-
-     
-
     </main>
 
+    <!-- FOOTER SECTION: copyright -->
     <footer>
         <div class="wrapper">
             <p>&copy; 2025 HITENA - TEF French Exam Preparation</p>
