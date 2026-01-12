@@ -112,6 +112,9 @@ h2{
 }
 
 /* --- ABOUT SECTION --- */
+.about{
+    background-color: var(--secondary);
+}
 .flex-container {
     display: flex;
     align-items: center;
@@ -120,6 +123,9 @@ h2{
 }
 
 .text-block, .app-image { flex: 1; }
+.text-block{
+    color: #ffffff;
+}
 
 .app-image img {
     max-width: 280px;
@@ -132,7 +138,7 @@ h2{
     list-style: none;
 }
 /* --- VIDEO --- */
-.video-section { padding: 60px 0; text-align: center; background: var(--secondary); color: #fff; }
+.video-section { padding: 60px 0; text-align: center; background-color: #f9f9f9; }
 
 .video-container {
     max-width: 400px;
