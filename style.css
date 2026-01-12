@@ -50,7 +50,7 @@ header {
     gap: 10px;
 }
 
-.logo-img { height: 35px; width: auto; }
+.logo-img { height: 50px; width: auto; }
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
@@ -158,6 +158,7 @@ video { width: 100%; display: block; }
     align-items: center;
     gap: 40px;
     margin-top: 30px;
+    flex-direction: column;
 }
 
 .qr-code img { width: 130px; border: 1px solid #eee; padding: 10px; border-radius: 10px; }
@@ -171,7 +172,9 @@ video { width: 100%; display: block; }
 .store-btn img {
     width: 180px; /* Fixed width to prevent overflow on small screens */
     height: auto;
+    display: none;
 }
+
 
 /* --- FOOTER --- */
 footer {
@@ -213,7 +216,14 @@ footer {
         width: 100%;
         gap:0px
     }
-
+    .store-btn img {
+    width: 180px; /* Fixed width to prevent overflow on small screens */
+    height: auto;
+    display:flex
+}
+    .qr-code img {
+        display: none;
+    }
     .store-links {
         flex-direction: row; /* Keeps buttons side by side */
         width: 100%;
