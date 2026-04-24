@@ -5,7 +5,7 @@ const path = require("path");
 // Try both filenames (file may appear as .json.json on Windows)
 let serviceAccount;
 try { serviceAccount = require("./serviceAccountKey.json"); }
-catch { serviceAccount = require("./serviceAccountKey.json.json"); }
+catch { serviceAccount = require("../serviceAccountKey.json.json"); }
 
 admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
 const db = admin.firestore();

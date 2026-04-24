@@ -477,8 +477,11 @@ function buildRegularForm(container) {
   }
 
   else if (skill === 'writing') {
-    html += `<div class="field full"><label>Question / Topic</label><textarea id="f_question" rows="2" required></textarea></div>`;
+    html += `<div class="field full"><label>Question 1</label><textarea id="f_question" rows="2" required></textarea></div>`;
+    html += `<div class="field full"><label>Question 2 <span style="font-weight:400;color:#aaa">(optional)</span></label><textarea id="f_question2" rows="2"></textarea></div>`;
     html += `<div class="field full"><label>Text / Instructions</label><textarea id="f_text" rows="3" required></textarea></div>`;
+    html += field('Answer 1 <span style="font-weight:400;color:#aaa">(optional)</span>', 'f_r1', 'text', '', false);
+    html += field('Answer 2 <span style="font-weight:400;color:#aaa">(optional)</span>', 'f_r2', 'text', '', false);
   }
 
   else if (skill === 'speaking') {
@@ -606,8 +609,16 @@ function buildRegularDoc() {
     fields.correctReponse = parseInt(val('f_correct'));
     fields.explanation = val('f_explanation');
   } else if (skill === 'writing') {
-    fields.question = val('f_question');
+    const q2 = val('f_question2');
+    if (q2) {
+      fields.question1 = val('f_question');
+      fields.question2 = q2;
+    } else {
+      fields.question1 = val('f_question');
+    }
     fields.text = val('f_text');
+    const r1 = val('f_r1'); if (r1) fields.reponse1 = r1;
+    const r2 = val('f_r2'); if (r2) fields.reponse2 = r2;
   } else if (skill === 'speaking') {
     fields.question = val('f_question');
     fields.text = val('f_text');
